@@ -11,6 +11,6 @@ export class ApiClientService {
   private httpClient = inject(HttpClient);
 
   public getPokemonValue(guess: GuessWord): Observable<ResponseWord>{
-    return this.httpClient.get<ResponseWord>(`https://pokeapi.co/api/v2/pokemon/${guess}`)
+    return this.httpClient.get<ResponseWord>(`https://deno-serverless-td-42.fannnyyy.deno.net?word=${guess.value}`)
   }
 }
